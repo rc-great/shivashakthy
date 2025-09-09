@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Shakthi Kunalini Sadhana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0615;
+            color: #d1b1e9;
+        }
+        .text-purple-dark {
+            color: #d1b1e9;
+        }
+        .text-purple-light {
+            color: #f3e9ff;
+        }
+        .bg-purple-dark {
+            background-color: #1a0b2d;
+        }
+        .bg-purple-gradient {
+            background: linear-gradient(180deg, rgba(26, 11, 45, 0) 0%, #1a0b2d 100%);
+        }
+        .border-purple-custom {
+            border-color: #6a3ab2;
+        }
+        .card {
+            background-color: #1a0b2d;
+            border: 1px solid #6a3ab2;
+        }
+        .text-glow {
+            text-shadow: 0 0 5px #f3e9ff;
+        }
+        .image-slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px;
+        }
+        .image-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            object-fit: cover;
+        }
+        .image-slide.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-[#0d0615]">
+
+    <!-- Language Selector and Navbar -->
+    <header class="flex justify-between items-center p-4 md:p-8 bg-black bg-opacity-30 backdrop-blur-sm fixed top-0 w-full z-10">
+        <div class="flex items-center space-x-2">
+            <h1 class="text-2xl font-bold text-purple-dark text-glow">
+                <span class="text-white">Shiva Shakthi</span> Kunalini Sadhana
+            </h1>
+        </div>
+        <nav class="hidden md:flex space-x-6 text-purple-light font-medium">
+            <a href="#about" class="hover:text-white transition-colors duration-300">Home</a>
+            <a href="#founder" class="hover:text-white transition-colors duration-300">About Founder</a>
+            <a href="#practices" class="hover:text-white transition-colors duration-300">Spiritual Practices</a>
+            <a href="#services" class="hover:text-white transition-colors duration-300">Services</a>
+            <a href="#contact" class="hover:text-white transition-colors duration-300">Contact</a>
+        </nav>
+    </header>
+    
+    <!-- Image Slider Section -->
+    <div class="image-slider-container mt-20">
+        <img class="image-slide active" src="/uploaded:5.jpg-369c8470-1942-4bb7-b209-6e3278cee770" alt="Slider Image 1">
+        <img class="image-slide" src="/uploaded:7.jpg-e993c431-acfa-499e-9324-cc609733992e" alt="Slider Image 2">
+        <img class="image-slide" src="/uploaded:8.jpg-b97fdb77-4f9b-4fec-ae08-7e1a91328328" alt="Slider Image 3">
+        <img class="image-slide" src="/uploaded:2.jpg-0351d1b9-7b78-43eb-8b61-cde6baf93863" alt="Slider Image 4">
+        <img class="image-slide" src="/uploaded:Kundalini-Meditation.png-b529b647-b8f2-4109-a3a4-8acc4e5a64cb" alt="Slider Image 5">
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.image-slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000); // Change image every 5 seconds
+    </script>
+
+
+    <main class="pt-8 md:pt-16">
+        <!-- Hero Section -->
+        <section class="text-center p-8 md:p-16">
+            <h2 class="text-5xl font-bold text-white mb-4">Spiritual Journey to Shiva Shakthi Kundalini Sadhana</h2>
+            <p class="text-lg text-purple-dark mb-8 max-w-2xl mx-auto">
+                Discover the divine path of self-realization and inner transformation through the ancient wisdom of Kundalini awakening.
+            </p>
+            <button class="bg-purple-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-900 transition-colors duration-300 border border-purple-custom">Join Us</button>
+        </section>
+
+        <!-- About Founder Section -->
+        <section id="founder" class="bg-purple-gradient p-8 md:p-16 rounded-xl mx-4 md:mx-16 my-8 border border-purple-custom shadow-xl">
+            <h3 class="text-4xl font-semibold text-center mb-12 text-white">About the Founder</h3>
+            <div class="md:flex md:space-x-8 items-center">
+                <div class="flex-shrink-0 mb-8 md:mb-0">
+                    <img src="/uploaded:Kundalini-Meditation.png-b529b647-b8f2-4109-a3a4-8acc4e5a64cb" alt="Founder Profile" class="mx-auto rounded-lg shadow-md border border-purple-custom">
+                </div>
+                <div class="text-lg text-purple-light">
+                    <p class="font-bold mb-2">Nagamani Nanda Bharathi</p>
+                    <p class="font-bold text-sm mb-4">Shiva Shakthi Kundalini Sadhana Founder</p>
+                    <p class="font-bold mb-2">Her Spiritual Journey</p>
+                    <p class="mb-4">
+                        Initially, my spiritual practice was limited to traditional rituals, prayers, and vows. This changed dramatically when I developed a profound aspiration for self-awareness (atma chaitanyam) and self-knowledge (atma jnanam). This pivot marked the true commencement of my deep spiritual journey. Over several years, through dedicated pursuit of this knowledge and rigorous spiritual discipline (tapasya), I was granted the path of Shiva Shakti Kundalini Sadhana. In this profound spiritual journey, I engaged deeply in meditation, pranayama, and energetic practices, which led to a profound internal transformation. The practice of navigating the Sushumna nadi was effortless, and I attained complete knowledge. Nagamaninanda Bharathi, a person who has mastered Kundalini Sadhana and has a complete understanding of all these matters, knows the path to Samadhi and what it entails. She understands what Samadhi is, what it yields, and how to attain it.
+                    </p>
+                    <p class="mb-4">
+                        Today, she is dedicated to guiding seekers on their own spiritual path through the sacred science of Kundalini awakening. With wisdom rooted in tradition and experience, she helps individuals connect with their inner divine nature, cultivating balance, clarity, and spiritual growth.
+                    </p>
+                    <p class="font-bold mb-2">Through Shiva Shakthi Kundalini Sadhana, she shares time-tested techniques for:</p>
+                    <ul class="list-disc list-inside space-y-1 mb-4">
+                        <li>Awakening dormant spiritual energies</li>
+                        <li>Attaining inner peace and harmony</li>
+                        <li>Deepening meditation and pranayama practices</li>
+                        <li>Experiencing higher states of consciousness</li>
+                    </ul>
+                    <p>Her mission is to empower every soul to walk the path of self-realization and awaken the limitless potential within.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spiritual Practices Section -->
+        <section id="practices" class="p-8 md:p-16">
+            <h3 class="text-4xl font-semibold text-center mb-12 text-white">Spiritual Practices</h3>
+            <p class="text-lg text-purple-dark mb-8 text-center max-w-2xl mx-auto">
+                Discover ancient wisdom through modern guidance. Transform your life with time-tested spiritual practices.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kundalini Shakthi Jagaran -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Kundalini Shakthi Jagaran</h4>
+                    <p class="text-sm text-purple-dark">Awaken your dormant spiritual energy to reveal profound spiritual powers and self-realization.</p>
+                </div>
+                <!-- Sookshma Nadi Breathing & Meditation Practices -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 17L5.82 9h12.36L12 19z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Sookshma Nadi Breathing & Meditation Practices</h4>
+                    <p class="text-sm text-purple-dark">Harness inner strength by activating subtle energy channels with ancient breathing practices.</p>
+                </div>
+                <!-- Pranayama, Dhyana, Mantra Sadhana -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 12l9 11 9-11-9-11z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Pranayama, Dhyana, Mantra Sadhana</h4>
+                    <p class="text-sm text-purple-dark">Experience peace, clarity, and strength with the power of breath, meditation, and sacred sounds.</p>
+                </div>
+                <!-- Kundalini Sadhanas -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Kundalini Sadhanas</h4>
+                    <p class="text-sm text-purple-dark">Master the art of Kundalini awakening and connect with higher energy dimensions through time-tested methods.</p>
+                </div>
+                <!-- Trinethram Sadhanas -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Trinethram Sadhanas</h4>
+                    <p class="text-sm text-purple-dark">Engage in practices that activate the third eye to unlock inner vision, intuition, and deeper states of awareness.</p>
+                </div>
+                <!-- Pancha Mudras Sadhana -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Pancha Mudras Sadhana</h4>
+                    <p class="text-sm text-purple-dark">Awaken spiritual energies within and align body, mind, and spirit with ancient mudra techniques.</p>
+                </div>
+                <!-- Ashta Mulaas Sadhana -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Ashta Mulaas Sadhana</h4>
+                    <p class="text-sm text-purple-dark">Utilize 8 powerful spiritual techniques to dissolve illusions and achieve higher consciousness.</p>
+                </div>
+                <!-- Nava Acaras -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 19c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Nava Acaras</h4>
+                    <p class="text-sm text-purple-dark">Empower your practice by aligning with 9 transformative principles of self-realization and divine connection.</p>
+                </div>
+                <!-- Awakening the Kundalini With Hatha Yoga -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Awakening the Kundalini With Hatha Yoga</h4>
+                    <p class="text-sm text-purple-dark">Balance the mind and body through traditional yoga practices that prepare you for Kundalini awakening.</p>
+                </div>
+                <!-- Getting a Lucky Life through the Practice of Shiva Shakthi -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Getting a Lucky Life through the Practice of Shiva Shakthi</h4>
+                    <p class="text-sm text-purple-dark">Tap into divine abundance and attract spiritual, mental, and material prosperity by aligning your life with cosmic energy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="p-8 md:p-16">
+            <h3 class="text-4xl font-semibold text-center mb-12 text-white">Services</h3>
+            <p class="text-lg text-purple-dark mb-8 text-center max-w-2xl mx-auto">
+                We offer a range of personalized services to support your spiritual journey. Each service is tailored to your unique needs and goals.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Service 1 -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-16 h-16 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Personal Spiritual Consultation</h4>
+                    <p class="text-sm text-purple-dark">Receive one-on-one guidance to address your specific spiritual questions and challenges. We will create a personalized sadhana plan for you.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="card p-6 rounded-xl text-center shadow-lg">
+                    <div class="mb-4">
+                        <svg class="w-16 h-16 mx-auto text-purple-light" fill="currentColor" viewBox="0 0 24 24"><path d="M12 5.9c.7 0 1.3.6 1.3 1.3S12.7 8.5 12 8.5 10.7 7.9 10.7 7.2 11.3 5.9 12 5.9M17 13.4c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3m-5 1.7c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3m-5-1.7c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3m10.9-4.8c-.8.1-1.5.8-1.5 1.6 0 .8.7 1.4 1.5 1.5.8-.1 1.5-.8 1.5-1.6 0-.8-.7-1.4-1.5-1.5zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">Group Workshops & Retreats</h4>
+                    <p class="text-sm text-purple-dark">Join our community for immersive workshops and retreats focused on specific spiritual practices, deep meditation, and energy cleansing.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <h4 class="text-2xl font-semibold text-white mb-4">Support Our Cause</h4>
+                <p class="text-sm text-purple-dark mb-4">You can support our mission by making a donation using the QR code below.</p>
+                <img src="https://placehold.co/300x400/1A0B2D/F3E9FF?text=UPI+QR+Code" alt="UPI QR Code" class="mx-auto rounded-lg shadow-md border border-purple-custom">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="p-8 md:p-16 bg-purple-gradient rounded-xl mx-4 md:mx-16 my-8 border border-purple-custom shadow-xl">
+            <h3 class="text-4xl font-semibold text-center mb-12 text-white">Contact</h3>
+            <p class="text-lg text-purple-dark mb-8 text-center max-w-2xl mx-auto">
+                Connect with us to begin your spiritual journey or learn more about our practices.
+            </p>
+            <div class="flex flex-col items-center space-y-4 text-lg">
+                <div class="flex items-center text-purple-dark">
+                    <span class="text-2xl mr-4">📍</span>
+                    <span>Hyderabad, India</span>
+                </div>
+                <div class="flex items-center text-purple-dark">
+                    <span class="text-2xl mr-4">✉️</span>
+                    <span>nandini1119ng@gmail.com</span>
+                </div>
+                <div class="flex items-center text-purple-dark">
+                    <span class="text-2xl mr-4">📞</span>
+                    <span>+91 7995139030</span>
+                </div>
+                <div class="pt-4 flex flex-col items-center space-y-4">
+                    <a href="https://youtube.com/@shivashakthikundalini72swasalu" class="flex items-center text-purple-light hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M21.5 6.2a1.8 1.8 0 00-1.8-1.8c-1.2-.2-6-.2-6-.2s-4.8 0-6 .2a1.8 1.8 0 00-1.8 1.8A24 24 0 002 12c0 2.2 0 6 2 6s4.8.2 6 .2 6-.2 6-.2a1.8 1.8 0 001.8-1.8A24 24 0 0022 12c0-2.2 0-6-2-6zm-10 8V9.8l5 2.2-5 2.2z"></path></svg>
+                        <span class="font-semibold">YouTube</span>
+                    </a>
+                    <a href="https://www.facebook.com/@shivashakthikundalini72swasalu" class="flex items-center text-purple-light hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H9c-3.3 0-6 2.7-6 6v10c0 3.3 2.7 6 6 6h10c3.3 0 6-2.7 6-6V8c0-3.3-2.7-6-6-6zm-1 18h-2v-8h-2V8h2V6c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v2h2v2h-2v8z"></path></svg>
+                        <span class="font-semibold">Facebook</span>
+                    </a>
+                    <a href="https://chat.whatsapp.com/FbraxLfr5dEfTQrqk0RQ" class="flex items-center text-purple-light hover:text-white transition-colors duration-300">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM15 11c-.5 0-1 .5-1 1s.5 1 1 1 1-.5 1-1-.5-1-1-1zm-3 0c-.5 0-1 .5-1 1s.5 1 1 1 1-.5 1-1-.5-1-1-1zm-3 0c-.5 0-1 .5-1 1s.5 1 1 1 1-.5 1-1-.5-1-1-1zm-1.5 5c0 .3-.2.5-.5.5s-.5-.2-.5-.5.2-.5.5-.5.5.2.5.5zm1.5-1.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5.2-.5.5-.5.5.2.5.5zm1.5-1.5c0 .3-.2.5-.5.5s-.5-.2-.5-.5.2-.5.5-.5.5.2.5.5z"></path></svg>
+                        <span class="font-semibold">WhatsApp Group</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
