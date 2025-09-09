@@ -33,25 +33,6 @@
         .text-glow {
             text-shadow: 0 0 5px #f3e9ff;
         }
-        .image-slider-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 500px;
-        }
-        .image-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            object-fit: cover;
-        }
-        .image-slide.active {
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="bg-[#0d0615]">
@@ -72,37 +53,6 @@
         </nav>
     </header>
     
-    <!-- Image Slider Section -->
-    <div class="image-slider-container mt-20">
-        <img class="image-slide active" src="/uploaded:5.jpg-369c8470-1942-4bb7-b209-6e3278cee770" alt="Slider Image 1">
-        <img class="image-slide" src="/uploaded:7.jpg-e993c431-acfa-499e-9324-cc609733992e" alt="Slider Image 2">
-        <img class="image-slide" src="/uploaded:8.jpg-b97fdb77-4f9b-4fec-ae08-7e1a91328328" alt="Slider Image 3">
-        <img class="image-slide" src="/uploaded:2.jpg-0351d1b9-7b78-43eb-8b61-cde6baf93863" alt="Slider Image 4">
-        <img class="image-slide" src="/uploaded:Kundalini-Meditation.png-b529b647-b8f2-4109-a3a4-8acc4e5a64cb" alt="Slider Image 5">
-    </div>
-
-    <script>
-        const slides = document.querySelectorAll('.image-slide');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        setInterval(nextSlide, 5000); // Change image every 5 seconds
-    </script>
-
-
     <main class="pt-8 md:pt-16">
         <!-- Hero Section -->
         <section class="text-center p-8 md:p-16">
@@ -118,7 +68,7 @@
             <h3 class="text-4xl font-semibold text-center mb-12 text-white">About the Founder</h3>
             <div class="md:flex md:space-x-8 items-center">
                 <div class="flex-shrink-0 mb-8 md:mb-0">
-                    <img src="/uploaded:Kundalini-Meditation.png-b529b647-b8f2-4109-a3a4-8acc4e5a64cb" alt="Founder Profile" class="mx-auto rounded-lg shadow-md border border-purple-custom">
+                    <img src="Kundalini-Meditation.png" alt="Founder Profile" class="mx-auto rounded-lg shadow-md border border-purple-custom">
                 </div>
                 <div class="text-lg text-purple-light">
                     <p class="font-bold mb-2">Nagamani Nanda Bharathi</p>
